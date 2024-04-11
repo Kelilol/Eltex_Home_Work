@@ -1,9 +1,9 @@
 CC = gcc
 CFLAGS = -Wall -Wextra -std=c99
 
-SRC = main.c phonebook.c contact.c sociallink.c email.c phonenumber.c
+SRC = main.c operationCulc.c
 OBJ = $(SRC:.c=.o)
-DEPS = phonebook.h contact.h sociallink.h email.h phonenumber.h 
+DEPS = operationCulc.h
 
 main: $(OBJ)
 	$(CC) $(CFLAGS) -o $@ $^
