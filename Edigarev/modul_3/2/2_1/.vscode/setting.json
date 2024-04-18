@@ -1,0 +1,30 @@
+{
+    // Настройки по умолчанию. Переопределите их, чтобы изменить глобально.
+    "editor.tabSize": 4,
+    "editor.detectIndentation": false,
+    "editor.wordWrap": "on",
+    "editor.minimap.enabled": true,
+    "editor.fontSize": 14,
+
+    // Настройки языка C/C++
+    "C_Cpp.default.configurationProvider": "ms-vscode.cpptools",
+    "C_Cpp.default.includePath": [
+        "${workspaceFolder}/**"
+    ],
+
+    // Дополнительные настройки для отладки
+    "debug.console.wordWrap": "on",
+    "debug.toolBarLocation": "floating",
+
+    // Дополнительные настройки для темы оформления
+    "workbench.colorTheme": "Default Dark+",
+    "workbench.iconTheme": "vscode-icons",
+
+    // Дополнительные настройки для Git
+    "git.autofetch": true,
+    "git.enableSmartCommit": true,
+    "git.confirmSync": false,
+
+    // Пользовательские настройки
+    "myExtension.customSetting": true
+}
