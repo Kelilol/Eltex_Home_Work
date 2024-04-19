@@ -12,7 +12,7 @@ void child_process(int pipe_fsd[], int num_numbers) {
     for (int i = 0; i < num_numbers; i++) {
         int number = rand() % 100 + 20; // Генерируем случайное число от 1 до 100
         write(pipe_fsd[1], &number, sizeof(number)); // Отправляем число родительскому процессу
-        printf("%d дочка %d\n", i,number);
+        //printf("%d дочка %d\n", i,number);
         //sleep(2);
     }
 
@@ -33,7 +33,8 @@ void parent_process(int pipe_fds[], int num_numbers) {
         int number;
         read(pipe_fds[0], &number, sizeof(number)); // Получаем число от дочернего процесса
         //sleep(2);
-        printf("%d родитель %d\n", i,number);
+        //printf("%d родитель %d\n", i,number);
+        printf("%d\n", number);
         fprintf(file, "%d\n", number); // Записываем число в файл
     }
 
