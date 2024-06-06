@@ -1,0 +1,1 @@
+savedcmd_/home/vboxuser/workspace/Eltex_Home_Work/Edigarev/modul5/task2/proc.mod := printf '%s\n'   proc.o | awk '!x[$$0]++ { print("/home/vboxuser/workspace/Eltex_Home_Work/Edigarev/modul5/task2/"$$0) }' > /home/vboxuser/workspace/Eltex_Home_Work/Edigarev/modul5/task2/proc.mod

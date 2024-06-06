@@ -1,0 +1,1 @@
+savedcmd_/home/vboxuser/workspace/Eltex_Home_Work/Edigarev/modul5/task2/Module.symvers :=  scripts/mod/modpost -m -a      -o /home/vboxuser/workspace/Eltex_Home_Work/Edigarev/modul5/task2/Module.symvers -T /home/vboxuser/workspace/Eltex_Home_Work/Edigarev/modul5/task2/modules.order -i Module.symvers -e 
