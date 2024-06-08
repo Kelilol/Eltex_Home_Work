@@ -1,0 +1,1 @@
+savedcmd_/home/vboxuser/workspace/Eltex_Home_Work/Edigarev/modul5/task4/char_dev.mod := printf '%s\n'   char_dev.o | awk '!x[$$0]++ { print("/home/vboxuser/workspace/Eltex_Home_Work/Edigarev/modul5/task4/"$$0) }' > /home/vboxuser/workspace/Eltex_Home_Work/Edigarev/modul5/task4/char_dev.mod
