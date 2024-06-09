@@ -1,0 +1,1 @@
+savedcmd_/home/vboxuser/workspace/Eltex_Home_Work/Edigarev/modul5/task5/netlink_module.mod := printf '%s\n'   netlink_module.o | awk '!x[$$0]++ { print("/home/vboxuser/workspace/Eltex_Home_Work/Edigarev/modul5/task5/"$$0) }' > /home/vboxuser/workspace/Eltex_Home_Work/Edigarev/modul5/task5/netlink_module.mod

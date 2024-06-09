@@ -1,0 +1,1 @@
+savedcmd_/home/vboxuser/workspace/Eltex_Home_Work/Edigarev/modul5/task5/modules.order := {   echo /home/vboxuser/workspace/Eltex_Home_Work/Edigarev/modul5/task5/netlink_module.o; :; } > /home/vboxuser/workspace/Eltex_Home_Work/Edigarev/modul5/task5/modules.order
