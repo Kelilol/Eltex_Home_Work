@@ -1,1 +1,0 @@
-savedcmd_/home/vboxuser/workspace/modul5/lab1/hello/Module.symvers :=  scripts/mod/modpost -m -a      -o /home/vboxuser/workspace/modul5/lab1/hello/Module.symvers -T /home/vboxuser/workspace/modul5/lab1/hello/modules.order -i Module.symvers -e 

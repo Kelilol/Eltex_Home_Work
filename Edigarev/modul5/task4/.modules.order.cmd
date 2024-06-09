@@ -1,1 +1,0 @@
-savedcmd_/home/vboxuser/workspace/Eltex_Home_Work/Edigarev/modul5/task4/modules.order := {   echo /home/vboxuser/workspace/Eltex_Home_Work/Edigarev/modul5/task4/char_dev.o; :; } > /home/vboxuser/workspace/Eltex_Home_Work/Edigarev/modul5/task4/modules.order

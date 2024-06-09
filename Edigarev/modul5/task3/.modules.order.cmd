@@ -1,1 +1,0 @@
-savedcmd_/home/vboxuser/workspace/Eltex_Home_Work/Edigarev/modul5/task3/modules.order := {   echo /home/vboxuser/workspace/Eltex_Home_Work/Edigarev/modul5/task3/sysfs_module.o;   echo /home/vboxuser/workspace/Eltex_Home_Work/Edigarev/modul5/task3/led_module.o; :; } > /home/vboxuser/workspace/Eltex_Home_Work/Edigarev/modul5/task3/modules.order
