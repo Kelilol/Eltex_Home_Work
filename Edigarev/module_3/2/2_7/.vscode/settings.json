@@ -1,0 +1,8 @@
+{
+    "files.associations": {
+        "signal.h": "c",
+        "sigevent-consts.h": "c",
+        "signalfd.h": "c",
+        "stdlib.h": "c"
+    }
+}
