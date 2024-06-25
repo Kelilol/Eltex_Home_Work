@@ -1,0 +1,6 @@
+gcc server.c -o server -Wall -Wextra -pedantic
+sudo ./server
+gcc client.c -o client -Wall -Wextra -pedantic
+./client
+Enter two numbers and an operation (add, sub, mul, div): 10 5 add
+Result: 15

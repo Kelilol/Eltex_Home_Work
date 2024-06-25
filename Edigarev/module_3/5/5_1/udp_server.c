@@ -15,8 +15,10 @@ int main(int argc, char *argv[]) {
     int port = atoi(argv[1]);
     int sockfd;
     struct sockaddr_in server_addr, client_addr;
+    struct sockaddr_in client1_addr, client2_addr;
     char buffer[BUFFER_SIZE];
-    socklen_t addr_len = sizeof(client_addr);
+    socklen_t addr_len = sizeof(struct sockaddr_in);
+    int client1_connected = 0, client2_connected = 0;
 
     // Создание сокета
     if ((sockfd = socket(AF_INET, SOCK_DGRAM, 0)) < 0) {
@@ -40,7 +42,7 @@ int main(int argc, char *argv[]) {
     printf("Server is listening on port %d\n", port);
 
     while (1) {
-        // Получение данных от клиента
+        // Получение данных от клиентов
         int n = recvfrom(sockfd, buffer, BUFFER_SIZE, 0, (struct sockaddr *)&client_addr, &addr_len);
         if (n < 0) {
             perror("recvfrom");
@@ -51,11 +53,33 @@ int main(int argc, char *argv[]) {
         buffer[n] = '\0';
         printf("Received message from client: %s\n", buffer);
 
-        // Отправка ответа клиенту
-        const char *response = "Message received";
-        sendto(sockfd, response, strlen(response), 0, (struct sockaddr *)&client_addr, addr_len);
+        // Определение клиента и сохранение его адреса
+        if (!client1_connected) {
+            client1_addr = client_addr;
+            client1_connected = 1;
+            printf("Client 1 connected\n");
+        } else if (client1_connected && !client2_connected &&
+                   (client_addr.sin_addr.s_addr != client1_addr.sin_addr.s_addr || 
+                    client_addr.sin_port != client1_addr.sin_port)) {
+            client2_addr = client_addr;
+            client2_connected = 1;
+            printf("Client 2 connected\n");
+        }
+
+        // Пересылка сообщения между клиентами
+        if (client1_connected && client2_connected) {
+            if (client_addr.sin_addr.s_addr == client1_addr.sin_addr.s_addr && 
+                client_addr.sin_port == client1_addr.sin_port) {
+                sendto(sockfd, buffer, n, 0, (struct sockaddr *)&client2_addr, addr_len);
+                printf("Forwarded message to Client 2\n");
+            } else {
+                sendto(sockfd, buffer, n, 0, (struct sockaddr *)&client1_addr, addr_len);
+                printf("Forwarded message to Client 1\n");
+            }
+        }
     }
 
     close(sockfd);
     return 0;
 }
+
